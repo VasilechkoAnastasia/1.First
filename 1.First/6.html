@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app"> </div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+
+        const Group = {
+            Name: 'Beatles',
+            Members: 'John Lennon, Paul McCartney, George Harrison, Ringo Starr',
+            Year: '1960',
+            Country: 'England',
+            Image: '2.png'
+        }
+
+        const StyleObj = {
+            color: 'black',
+            backgroundColor: '#FFE4E1',
+            padding: '20px',
+            border: '1px solid black'
+        }
+
+        const styleImg={
+            weidth: '300px',
+            height: '300px'
+        }
+
+        const div = document.getElementById("app");
+        const Root = ReactDOM.createRoot(div);
+        Root.render(
+            <div style={StyleObj}>
+                <div>
+                    <img src={Group.Image} style={styleImg}/>
+                </div>
+                <div>
+                    <p>{Group.Name}</p>
+                    <p>{Group.Members}</p>
+                    <p>{Group.Year}</p>
+                    <p>{Group.Country}</p>
+                </div>
+            </div>
+        );
+
+    </script>
+</body>
+
+</html>

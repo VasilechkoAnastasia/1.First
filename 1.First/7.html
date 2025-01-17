@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app"> </div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+
+        const Cooking = {
+            Dish: 'Pancakes',
+            Ingredients: 'Milk 500ml, flour 250g, eggs 2, sugar 1 tbsp, salt 1 pinch, oil 2 tbsp',
+            Portion: '4 servings',
+            Subsequence: 'Mix all, whisk smooth, fry on hot pan',
+            Image: '3.png'
+        }
+
+        const StyleObj = {
+            color: 'black',
+            backgroundColor: '#F0FFFF',
+            padding: '20px',
+            border: '1px solid black'
+        }
+
+        const styleImg={
+            weidth: '300px',
+            height: '300px'
+        }
+
+        const div = document.getElementById("app");
+        const Root = ReactDOM.createRoot(div);
+        Root.render(
+            <div style={StyleObj}>
+                <div>
+                    <img src={Cooking.Image} style={styleImg}/>
+                </div>
+                <div>
+                    <p>{Cooking.Dish}</p>
+                    <p>{Cooking.Ingredients}</p>
+                    <p>{Cooking.Portion}</p>
+                    <p>{Cooking.Subsequence}</p>
+                </div>
+            </div>
+        );
+
+    </script>
+</body>
+
+</html>
